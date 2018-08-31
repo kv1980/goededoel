@@ -1,6 +1,7 @@
 package be.vdab.goededoel.entities;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.math.BigDecimal;
 
@@ -31,5 +32,10 @@ public class GoedeDoelTest {
 		doel.verhoogOpgebracht(BigDecimal.TEN);
 		doel.verhoogOpgebracht(BigDecimal.ONE);
 		assertEquals(0, doel.getOpgebracht().compareTo(BigDecimal.valueOf(11)));
+	}
+	
+	@Test
+	public void goedDoelVerschiltVanEenObjectMetEenAnderType() {
+		assertNotEquals(doel,BigDecimal.ZERO);
 	}
 }
