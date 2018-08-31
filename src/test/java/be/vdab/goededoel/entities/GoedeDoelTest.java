@@ -38,4 +38,16 @@ public class GoedeDoelTest {
 	public void goedDoelVerschiltVanEenObjectMetEenAnderType() {
 		assertNotEquals(doel,BigDecimal.ZERO);
 	}
+	
+	@Test
+	public void goedDoelVerschiltVanEenGoedDoelMetEenAndereNaam() {
+		GoedeDoel doel2 = new GoedeDoel("Rode Kruis");
+		assertNotEquals(doel,doel2);
+	}
+	
+	@Test
+	public void goedDoelIsGelijkAanEenGoedDoelMetDezelfdeNaam() {
+		GoedeDoel doel2 = new GoedeDoel("CliniClowns");
+		assertNotEquals(doel,doel2);
+	}
 }
