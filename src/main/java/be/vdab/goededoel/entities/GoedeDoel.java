@@ -14,4 +14,8 @@ public class GoedeDoel {
 	public BigDecimal getOpgebracht() {
 		return opgebracht;
 	}
+	
+	public void verhoogOpgebracht(BigDecimal bedrag) {
+		opgebracht = bedrag;
+	}
 }

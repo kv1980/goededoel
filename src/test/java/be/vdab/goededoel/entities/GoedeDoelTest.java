@@ -25,4 +25,11 @@ public class GoedeDoelTest {
 	public void eenNieuwDoelHeeftNogNietsOpgebracht() {
 		assertEquals(0, doel.getOpgebracht().compareTo(BigDecimal.ZERO));
 	}
+	
+	@Test
+	public void eenDoelKanMetEenBedragWordenVerhoogd() {
+		doel.verhoogOpgebracht(BigDecimal.TEN);
+		doel.verhoogOpgebracht(BigDecimal.ONE);
+		assertEquals(0, doel.getOpgebracht().compareTo(BigDecimal.valueOf(11)));
+	}
 }
