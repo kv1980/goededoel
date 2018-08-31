@@ -48,6 +48,6 @@ public class GoedeDoelTest {
 	@Test
 	public void goedDoelIsGelijkAanEenGoedDoelMetDezelfdeNaam() {
 		GoedeDoel doel2 = new GoedeDoel("CliniClowns");
-		assertNotEquals(doel,doel2);
+		assertEquals(doel,doel2);
 	}
 }
