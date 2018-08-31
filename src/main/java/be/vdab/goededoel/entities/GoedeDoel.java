@@ -16,6 +16,6 @@ public class GoedeDoel {
 	}
 	
 	public void verhoogOpgebracht(BigDecimal bedrag) {
-		opgebracht = bedrag;
+		opgebracht = opgebracht.add(bedrag);
 	}
 }
