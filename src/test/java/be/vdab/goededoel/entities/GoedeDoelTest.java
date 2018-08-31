@@ -35,6 +35,16 @@ public class GoedeDoelTest {
 	}
 	
 	@Test
+	public void GoedeDoelenDieGelijkZijnHebbenDezelfdeHashCode() {
+		assertEquals(doel.hashCode(),new GoedeDoel(NAAM).hashCode());
+	}
+	
+	@Test
+	public void GoedeDoelenDieNietGelijkZijnHebbenNietDezelfdeHashCode() {
+		assertNotEquals(doel.hashCode(),new GoedeDoel("Rode Kruis").hashCode());
+	}
+	
+	@Test
 	public void goedDoelVerschiltVanEenObjectMetEenAnderType() {
 		assertNotEquals(doel,BigDecimal.ZERO);
 	}

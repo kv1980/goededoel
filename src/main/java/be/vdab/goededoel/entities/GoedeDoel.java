@@ -22,6 +22,10 @@ public class GoedeDoel {
 		opgebracht = opgebracht.add(bedrag);
 	}
 
+	public int hashCode() {
+		return this.naam.toUpperCase().hashCode();
+	}
+
 	@Override
 	public boolean equals(Object object) {
 		if (!(object instanceof GoedeDoel)) {
