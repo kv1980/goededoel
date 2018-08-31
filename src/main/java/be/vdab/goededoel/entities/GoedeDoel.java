@@ -43,6 +43,7 @@ public class GoedeDoel {
 		opgebracht = opgebracht.add(bedrag);
 	}
 
+	
 	@Override
 	public int hashCode() {
 		return this.naam.toUpperCase().hashCode();
